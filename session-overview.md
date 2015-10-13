@@ -1,6 +1,8 @@
 # Übersicht der Sessions
 
-## 1. Einführung (14.10.15)
+## 1. Einführung
+
+Session am: 14.10.15
 
 - Vorstellung
 - Demo: Sonic Pi
@@ -38,7 +40,9 @@
 - Overtones, harmonics and Additive synthesis, https://www.youtube.com/watch?v=YsZKvLnf7wU&list=PL0CF041F562C5BE5E
 - Sonic Pi-Dokumentation "Synths"
 
-## 3. Filter und Effekte, Datenstrukturen und Kontrollfluss II, Timing (11.11.15)
+## 3. Filter und Effekte, Datenstrukturen und Kontrollfluss II, Timing
+
+Session am: 11.11.15
 
 - Filter und Effekte in Sonic Pi
 - Datenstrukturen und Kontrollfluss II: Codebeispiele mit Erläuterungen
@@ -55,7 +59,9 @@
 
 - Sonic Pi-Dokumentation "Filter" und "Fx"
 
-## 4. Sampling / Drum-Loops und Sequencing (25.11.15)
+## 4. Sampling / Drum-Loops und Sequencing
+
+Session am: 25.11.15
 
 - Grundlage zum Sampling, Bestand in Sonic Pi und eigene Erweiterungen
 - Sequencing in Sonic Pi: Codebeispiele mit Erläuterungen
@@ -68,7 +74,9 @@
     - Samples in Sonic Pi (Bestand, Parameter, Beispiele)
     - Verwendung eigener Samples
 
-## 5. Randomization und Live-Loops, Elektronische Musik I (09.12.15)
+## 5. Randomization und Live-Loops, Elektronische Musik I
+
+Session am: 09.12.15
 
 - Elektronische Musik am Beispiel von "Kontakte" von Karlheinz Stockhausen
 - Randomization und Live-Loops: Codebeispiele und Erläuterungen
@@ -83,7 +91,9 @@
 - WDR3 Studio Elektronische Musik Stockhausen - Kontakte, Radio-Feature online:  https://www.youtube.com/watch?v=kBP1v29cx60
 - Karlheinz Stockhausen (1978): Die vier Kriterien der elektronischen Musik, in: Texte zur Musik, Bd. 4, Köln: DuMont, S. 360-401; als Skript eines Vortrag vom 14.09.72 online: http://www.elektropolis.de/ssb_story_stockhausen.htm
 
-## 6. Live-Programmierung, Elektronische Musik II: Electronica (06.01.16)
+## 6. Live-Programmierung, Elektronische Musik II: Electronica
+
+Session am: 06.01.16
 
 - Live-Programmierung, Codebeispiele und Erläuterungen
 - Elektronische Musik II, 'Advice to clever children': Aphex Twin, Plasticman, Scanner, Daniel Pemberton u.a.
@@ -94,7 +104,9 @@
 - Interview mit Karlheinz Stockhausen, 'Advice to clever children', "The Wire", November 1995, http://www.andreas.de/aphextwin/articles/interview2.html
 - Karlheinz Stockhausen, Gesang der Jünglinge, https://www.youtube.com/watch?v=nffOJXcJCDg
 
-## 7. Offene Enden: Rückblick, Vorstellung der Arbeitsproben, Ausblick (20.01.16)
+## 7. Offene Enden: Rückblick, Vorstellung der Arbeitsproben, Ausblick
+
+Session am: 20.01.16
 
 - Vorstellung der Arbeitsergebnisse
 - Rekapitulation
