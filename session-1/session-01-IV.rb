@@ -10,33 +10,25 @@ set_sched_ahead_time! 2   # maybe we need to give SP time to prepare
 # Metronome Helper Functions for synching
 #########################################
 
-clock = 0 # initial time reset
-
-# Count every bar
+# Count every beat
 live_loop :bar do
-  clock = tick               # tick is the current beat
-  puts "bar : #{clock/4}"  # number of bar: using default integer division
-  puts "beat : #{clock}"   # number of beat
-
-  # puts "tick : #{tick}" # Careful: Any time you call tick it's being increased
-
-  x = ring( "| 1 |   |   |   |", "|   | 2 |   |   |", "|   |   | 3 |   |", "|   |   |   | 4 |")[clock]
-
-  puts x                     # a bar marker organised as a ring with beat as counter
+  cue :tick
   sleep 1
-end #bar
+end
 
-# Synch 2-bar patterns
-live_loop :every_two_bars do
-  sync :bar
-  sample :elec_blip, amp: 1, rate: 1
+# Sync 2-bar patterns
+live_loop :two_bars, autocue: false do
+  sync :tick
+  cue :every_two_bars
+  sample :elec_blip, amp: 0.5, rate: 1
   sleep 8
 end
 
 # Synch 4-bar patterns
-live_loop :every_four_bars do
-  sync :bar
-  sample :elec_blip, amp: 1, rate: 2.0
+live_loop :four_bars, autocue: false do
+  sync :tick
+  cue :every_four_bars
+  sample :elec_blip, amp: 0.5, rate: 2.0
   sleep 16
 end
 
@@ -64,10 +56,9 @@ g_chord = [:g5,:a5,:d6,:g6,:a6,:d7,:g7,:a7]
 a_chord = [:a5,:b5,:e6,:g6,:a6,:b6,:e7,:g7,:a7]
 e_chord = [:e5,:gs5,:b5,:e6,:gs6,:b6,:e7,:gs7,:b7]
 
-#########################################
 # Set up the 2nd brass section
-#########################################
-  # notes and rests
+# Helper function for various durations and crescendi/decrescendi
+# notes and rests
 n = [[:a4],[:d5],[:d5],[:cs5],[:a4],[:b4],[:fs4],[:a4,:e5],[:e4,:gs4,:e5],[:d3,:e4,:d4,:e5],[:e4,:e5,:d5]]
   # duration for notes and rest; fade in/out
   # if fade needed use subarray [ note, 1 = fade-in, 0 = fade-out ]
@@ -80,10 +71,10 @@ n = [[:a4],[:d5],[:d5],[:cs5],[:a4],[:b4],[:fs4],[:a4,:e5],[:e4,:gs4,:e5],[:d3,:
       if n != :r # check if note or rest
         if d.is_a?(Array) # check if fade is needed
           if d[1] == 1 # fade in
-            play n, amp: 1.5, attack: d[0] * (ratio * 1/3), sustain: d[0] * (ratio * 2/3), release: d[0] * (1-ratio)
+            play n, amp: 0.5, attack: d[0] * (ratio * 1/3), sustain: d[0] * (ratio * 2/3), release: d[0] * (1-ratio)
             sleep d[0]
           else # fade out
-            play n, amp: 1.5, attack: d[0] * (1-ratio), sustain: 0, release: d[0] * ratio
+            play n, amp: 0.5, attack: d[0] * (1-ratio), sustain: 0, release: d[0] * ratio
             sleep d[0]
           end
         else
@@ -97,17 +88,36 @@ n = [[:a4],[:d5],[:d5],[:cs5],[:a4],[:b4],[:fs4],[:a4,:e5],[:e4,:gs4,:e5],[:d3,:
   end
  
 #########################################
+# Clumsy Mixer
+#########################################
+# 1 starts, 0 stops the loops
+
+chords    = 0
+brass1    = 0
+brass2    = 0
+bass      = 0
+drums     = 0
+hihat1    = 0
+hihat2    = 0
+flittr    = 0
+
+chords_lv = 1 # 3
+brass1_lv = 0.9 # 0.9
+brass2_lv = 0.3 # 0.3
+flittr_lv = 0.0 # 0.3
+
+#########################################
 # Love Loops for Playing
 #########################################
 
 uncomment do
 
   # The Chords
-  live_loop :chords do
-    #stop
+  live_loop :chords, autocue: false do
+    stop if chords < 1
     sync :every_four_bars # reaches over 4 bars so we want it to wait
     with_synth :hollow do
-      use_synth_defaults amp: 3, attack: 0.1, sustain: 1, release: 5, noise: 4
+      use_synth_defaults amp: chords_lv, attack: 0.1, sustain: 1, release: 5, noise: 4
       with_fx :reverb, room: 0.5 do
         play_pattern_timed [[:b3,:d4,:fs4,:a4,:b4,:fs5],
                             [:a3,:d4,:g4,:a4,:g5],
@@ -119,8 +129,8 @@ uncomment do
 end
 
 # The Bass Line
-live_loop :bass do
-  #stop
+live_loop :bass, autocue: false do
+  stop if bass < 1
   sync :every_four_bars # reaches over 4 bars so we want it to wait
   with_synth :fm do
     use_synth_defaults amp: 0.5, attack: 0.0, sustain: 0.15, release: 0.01, cutoff: 65
@@ -131,8 +141,8 @@ end
 # The Drums
 
 # Bass Drum and Snare
-live_loop :bass_snare do
-  #stop
+live_loop :bass_snare, autocue: false do
+  stop if drums < 1
   sync :every_two_bars # a one bar pattern; played twice to match the bass line
   2.times do
     sample :drum_bass_soft
@@ -158,9 +168,26 @@ live_loop :bass_snare do
   end
 end
 
-# Hihat
-live_loop :hihat do
-  #stop
+# Hihat2
+live_loop :hihat1, autocue: false do
+  stop if hihat1 < 1
+  sync :every_two_bars # a one quarter pattern; played 4 times x2 for 2 bars
+  (4*2).times do
+    sleep 0.25
+    sample :drum_cymbal_closed, amp: 0.5, finish: 1
+    sleep 0.25
+    sample :drum_cymbal_closed, amp: 0.35, finish: 0.1
+    sleep 0.25
+    sample :drum_cymbal_closed, amp: 0.15, finish: 0.2
+    sleep 0.25
+    sample :drum_cymbal_closed, amp: 0.35, finish: 0.1
+    #sleep 0.25
+  end
+end
+
+# Hihat2
+live_loop :hihat2, autocue: false do
+  stop if hihat2 < 1
   sync :every_two_bars # a one quarter pattern; played 4 times x2 for 2 bars
   (4*2).times do
     sample :drum_cymbal_closed, amp: 0.5
@@ -174,11 +201,11 @@ live_loop :hihat do
   end
 end
 
-live_loop :brass do
-  #stop
+live_loop :brass1, autocue: false do
+  stop if brass1 < 1
   sync :every_four_bars
-  with_synth :subpulse do
-    use_synth_defaults amp: 0.9, attack: 0.0, sustain: 0.15, release: 0.01, cutoff: 100, pan: -0.5
+  with_synth :sine do
+    use_synth_defaults amp: brass1_lv, attack: 0.0, sustain: 0.15, release: 0.01, cutoff: 100, pan: -0.5
     with_fx :reverb, room: 0.75 do
       play_pattern_timed phrase_a, [0.25]
       play_pattern_timed phrase_b, [0.25]
@@ -188,11 +215,11 @@ live_loop :brass do
   end
 end
 
-live_loop :brass2 do
-  #stop
+live_loop :brass2, autocue: false do
+  stop if brass2 < 1
   sync :every_four_bars
-  with_synth :sine do
-    use_synth_defaults amp: 0.3, attack: 0, sustain: 0, release: 0.15
+  with_synth :subpulse do
+    use_synth_defaults amp: brass2_lv, attack: 0, sustain: 0, release: 0.15
     with_fx :reverb, room: 0.75 do
       #with_transpose +12 do
         play_synth n, d
@@ -202,12 +229,12 @@ live_loop :brass2 do
 end
 
 # The Flitter
-live_loop :flitter do
-  #stop
+live_loop :flitter, autocue: false do
+  stop if flittr < 1
   sync :every_four_bars
   with_synth :pretty_bell do
-    use_synth_defaults amp: 0.3, attack: 0.1, sustain: 0.2, release: 0
-    with_random_seed 11823 do
+    use_synth_defaults amp: flittr_lv, attack: 0.1, sustain: 0.2, release: 0
+    with_random_seed 11865 do
       with_fx :reverb, room: 1 do
         2.times do
           6.times do
