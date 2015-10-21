@@ -4,7 +4,7 @@ All four files in this directory are meant as a basis for a presentation for the
 
 ## How to run the code
 
-The four files are selfcontained of each other. They do make heavy use of the `comment do/end` expression. So if you run them, don't forget do to a `uncomment` at the sections you'd like to try out.
+The four files are self contained of each other. They do make heavy use of the `comment do/end` expression. So if you run them, don't forget do to a `uncomment` at the sections you'd like to try out.
 
 To run the files:
 
