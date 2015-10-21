@@ -6,7 +6,7 @@ All four files in this directory are meant as a basis for a presentation for the
 
 The four files are self contained of each other. They do make heavy use of the `comment do/end` expression. So if you run them, don't forget do to a `uncomment` at the sections you'd like to try out.
 
-To run the files:
+To run the code:
 
 * Click on the file name
 * Click the button `raw`
@@ -16,4 +16,6 @@ To run the files:
 
 ## Ressourcen
 
-There is a demonstration online, based on the file `session-01-IV.rb`. Using some variable I start/stop the different `live_loops` of the script to create a piece of music. Please watch the video on YouTube: https://www.youtube.com/watch?v=pkMwvykZ_Yc
+There is a demonstration online, based on the file `session-01-IV.rb`. Using some variables I start/stop the different `live_loops` of the script to create a piece of music.
+
+Please watch the video on YouTube: https://www.youtube.com/watch?v=pkMwvykZ_Yc
