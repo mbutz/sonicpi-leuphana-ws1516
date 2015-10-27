@@ -28,7 +28,24 @@ end
 #
 # Please follow this rule: Do not copy and paste. Type everything.
 
-# 3. Start trying to realise an idea of you own.
+# 3. Play with the inbuild Sample Collection
+
+# use:
+
+comment do
+
+  sample [sample_name]
+
+  # and the different parameter such as
+  # rate, start, finish, beat_stretch, pitch_stretch.
+  # Refer to the documentation to see how these work.
+
+  # Combine samples, play them together or in succession and
+  # experiment with the timing.
+  
+end
+
+# 4. Start trying to realise an idea of you own.
 #
 # Break the idea up into simple and small steps
 # Try to make these happen.
