@@ -35,6 +35,8 @@ Session 2 am: 28.10.15
     - Kombinationen von Synthesizern in Sonic Pi
     - Demonstration und Erläuterung der wichtigsten Parameter
 
+Dazu die Präsentation von Sina Brendel und Moritz Constantin: https://prezi.com/pwbdr2wxgj8n/synthesizer/?utm_campaign=share&utm_medium=copy
+
 ### Ressourcen
 
 - Wolfgang Saus, Die Obertonreihe, http://www.oberton.org/obertongesang/die-obertonreihe/ 
