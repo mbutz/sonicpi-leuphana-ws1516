@@ -19,8 +19,9 @@ comment do
   # some code here ...
 end
 
-use_synth :sine
-use_synth_defaults, amp: 1 # more parameters
+comment do
+#use_synth :sine
+#use_synth_defaults, amp: 1 # more parameters
 
 end
 
@@ -72,7 +73,7 @@ end
 # You can 'uncomment' with 'uncomment' (meaning: if you press 'run' code
 # will 'run' or in other words 'will be evaluated by Sonic Pi'). 
 
-uncomment do
+comment do
   # code will run
 end
 
@@ -120,8 +121,9 @@ end
 comment do
 
   4.times do
-    sample :loop_amen
-    sleep sample_duration(:loop_amen)
+    sample :loop_amen, rate: 2
+    sleep sample_duration(:loop_amen, rate: 2)
+    # sleep 1
   end
 end
 
