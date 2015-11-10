@@ -51,7 +51,7 @@ pool =  [degree(1, :c5, :mixolydian),
 # 17 = Pfeifende Glissandi (mit ein bisschen Attack)
 # 18 = Pfeifende Glissandi, tief
 # 19 = Urwald
-ex = 17
+ex = 3
 
 
 # Example 1
