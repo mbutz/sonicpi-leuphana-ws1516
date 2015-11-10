@@ -60,7 +60,7 @@ Session 3 am: 11.11.15
 
 ### Ressourcen
 
-- Sonic Pi-Dokumentation "Filter" und "Fx"
+- Sonic Pi-Hilfe "Fx" und "Tutorial", Kapitel "Effekte"
 - Einführung in die Musiktheorie, kurze Einführung als PDF: http://www.2felsfrei.de/attachments/024_musiktheorie.pdf
 
 ## Sampling, Drum-Loops und Sequencing, Timing
