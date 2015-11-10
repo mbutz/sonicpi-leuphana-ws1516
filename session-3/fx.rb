@@ -42,7 +42,7 @@ pool =  [degree(1, :ds5, :mixolydian),
 # 28. Slicer
 # 29. Wobble
 
-ex = 21
+ex = 29
 
 live_loop :fm_bitcrusher do
   with_fx :bitcrusher do
@@ -252,6 +252,103 @@ end
 live_loop :panslicer do
   with_fx :panslicer, phase: 2, pan_min: -0.2, pan_max: 0.2, pulse_width: 0.75 do
     if ex != 21
+      stop
+    end
+
+    sample :ambi_piano, rate: 0.79
+    sleep sample_duration(:ambi_piano)
+    
+    play pool[0, 4]
+    sleep 1
+    play_pattern_timed(pool, [1, 1, 1, 1, 1, 1, 1])
+  end
+end
+
+# 22
+live_loop :pitch_shift do
+  with_fx :pitch_shift, pitch: 2, pitch_dis: 1, time_dis: 0.5 do
+    if ex != 22
+      stop
+    end
+
+    sample :ambi_piano, rate: 0.79, amp: 4
+    sleep sample_duration(:ambi_piano)
+    
+    play pool[0, 4]
+    sleep 1
+    play_pattern_timed(pool, [1, 1, 1, 1, 1, 1, 1])
+  end
+end
+
+# 23
+live_loop :resonant_band_pass_filter do
+  with_fx :rbpf, centre: 50, res: 0.9 do
+    if ex != 23
+      stop
+    end
+
+    sample :ambi_piano, rate: 0.79
+    sleep sample_duration(:ambi_piano)
+    
+    play pool[0, 4]
+    sleep 1
+    play_pattern_timed(pool, [1, 1, 1, 1, 1, 1, 1])
+  end
+end
+
+
+# 24
+live_loop :reverb do
+  with_fx :reverb, room: 1, damp: 0 do
+    if ex != 24
+      stop
+    end
+
+    sample :ambi_piano, rate: 0.79
+    sleep sample_duration(:ambi_piano)
+    
+    play pool[0, 4]
+    sleep 1
+    play_pattern_timed(pool, [1, 1, 1, 1, 1, 1, 1])
+  end
+end
+
+# 26
+live_loop :ring_mod do
+  with_fx :ring_mod, freq: 2 do
+    if ex != 26
+      stop
+    end
+
+    sample :ambi_piano, rate: 0.79
+    sleep sample_duration(:ambi_piano)
+    
+    play pool[0, 4]
+    sleep 1
+    play_pattern_timed(pool, [1, 1, 1, 1, 1, 1, 1])
+  end
+end
+
+# 28
+live_loop :slicer do
+  with_fx :slicer, pan_min: -0.5, pan_max: 0.5, wave: 2, invert_wave: 1, phase: 1 do
+    if ex != 28
+      stop
+    end
+
+    sample :ambi_piano, rate: 0.79
+    sleep sample_duration(:ambi_piano)
+    
+    play pool[0, 4]
+    sleep 1
+    play_pattern_timed(pool, [1, 1, 1, 1, 1, 1, 1])
+  end
+end
+
+# 29
+live_loop :wobble do
+  with_fx :wobble, cutoff_min: 30, pulse_width: 1 do
+    if ex != 29
       stop
     end
 
