@@ -4,7 +4,7 @@
 
 use_bpm 120
 
-# The Material of Musik
+# The Material of Music
 ############################################################
 
 comment do
@@ -82,13 +82,13 @@ with_bpm 160 do
     # Some examples for major scales:
 
     play_pattern_timed scale(:c, :major), 0.75
-    sleep 2
+    sleep 4
 
     play_pattern_timed scale(:c, :lydian), 0.75
-    sleep 2
+    sleep 4
 
     play_pattern_timed scale(:c, :mixolydian), 0.75
-    sleep 2
+    sleep 4
 
   end #comment
 
@@ -97,13 +97,13 @@ with_bpm 160 do
     # Some examples for minor scales:
 
     play_pattern_timed scale(:c, :dorian), 0.75
-    sleep 2
+    sleep 4
 
     play_pattern_timed scale(:c, :phrygian), 0.75
-    sleep 2
+    sleep 4
 
     play_pattern_timed scale(:c, :aeolian), 0.75
-    sleep 2
+    sleep 4
 
   end #comment
 
@@ -127,7 +127,7 @@ comment do
   # With these you can't do much 'wrong'; e.g.:
 
   48.times do
-    play scale(:c, :major_pentatonic, num_octaves: 2).choose
+    play scale(:c, :minor_pentatonic, num_octaves: 2).choose
     sleep 0.25
   end
 
@@ -153,7 +153,7 @@ comment do
 # Minor Sixth                         b13      kl. Sechste
 # Major Sixth                          13      gr. Sechste
 # Minor Seventh                        b7      kl. Septime
-# Major Seventh                         7      gr. Semtime
+# Major Seventh                         7      gr. Septime
 # Octave                                       Oktave
 # Diminished Ninth                     b9      kl. None
 # Ninth                                 9      gr. None
@@ -298,7 +298,7 @@ comment do
 
   sleep 8
   
-  puts "Tritone or diminished Fith (b5)"
+  puts "Tritone or diminished Fifth (b5)"
   4.times do
     play [:c, :gb]
     sleep 1
@@ -306,26 +306,28 @@ comment do
   
 end
 
-uncomment do
+comment do
   # Tension and Resolution
   # This is one of the base principles in all Western Music
   # V => I, or the resolution from the dominant to the tonic
   # by means of a voice leading from dissonance to consonance
+  # (G) f \ e 
+  # (C) b / c
 
   play [:f, :b], sustain: 1, release: 1
-  sleep 2
+  sleep 4
   play [:e, :c5], sustain: 1, release: 3
   sleep 4
   play [:f], sustain: 1, release: 1
   sleep 4
   play [:e], sustain: 1, release: 1
-  sleep 2
+  sleep 4
   play [:b], sustain: 1, release: 1
-  sleep 2
+  sleep 4
   play [:c5], sustain: 1, release: 1
   sleep 4
   play [:f, :b], sustain: 1, release: 1
-  sleep 2
+  sleep 4
   play [:e, :c5], sustain: 1, release: 3
   sleep 6
 
@@ -339,3 +341,109 @@ uncomment do
 
 end #comment
 
+comment do
+  
+  # Chords from intervalls
+
+  # A fifth
+  play_pattern_timed [:c, :g], 1
+  sleep 2
+  play [:c, :g], sustain: 2, release: 1
+  sleep 6
+
+  # Add a note inbetween the fifth, now we have a major third with a 
+  # minor third build upon it:
+  # C Major
+  play_pattern_timed [:c, :e, :g], 1
+  sleep 2
+  play chord(:c, :major), sustain: 2, release: 1
+  sleep 6
+
+  # A minor third and a major third
+  # C minor
+  play_pattern_timed [:c, :eb, :g], 1
+  sleep 2
+  play chord(:c, :minor), sustain: 2, release: 1
+  sleep 6
+
+end
+
+comment do
+
+  # We can manipulate the fifth
+  # C diminished
+  play_pattern_timed [:c, :eb, :gb], 1
+  sleep 2
+  play chord(:c, :diminished), sustain: 2, release: 1
+  sleep 6
+
+  # C diminished
+  play_pattern_timed [:c, :e, :gs], 1
+  sleep 2
+  play chord(:c, :augmented), sustain: 2, release: 1
+  sleep 6
+  
+end
+
+comment do
+
+  # We can add another third upon our structure
+  # C major 7
+  play_pattern_timed [:c, :e, :g, :b], 1
+  sleep 2
+  play chord(:c, :M7), sustain: 2, release: 1
+  sleep 6
+
+  # C minor 7
+  play_pattern_timed [:c, :eb, :g, :bb], 1
+  sleep 2
+  play chord(:c, :m7), sustain: 2, release: 1
+  sleep 6
+  
+end
+
+comment do
+
+  # And more ...
+  # C major 7
+  play_pattern_timed [:c, :e, :g, :b, :d5], 1
+  sleep 2
+  play [:c, :e, :g, :b, :d5], sustain: 2, release: 1
+  sleep 6
+
+  # C minor 7
+  play_pattern_timed [:c, :eb, :g, :bb, :d5], 1
+  sleep 2
+  play [:c, :eb, :g, :bb, :d5], sustain: 2, release: 1
+  sleep 6
+  
+end
+
+comment do
+
+  # We can leave out the first third (which tells us whether we 
+  # have a major or minor chord) and create a undecided mode.
+
+  # C 4sus7
+  play_pattern_timed [:c, :f, :g, :bb], 1
+  sleep 2
+  play chord(:c, '7sus4'), sustain: 2, release: 1
+
+  sleep 6
+
+end
+
+comment do
+
+  # In terms of classical music theory classical this would always be considered as 
+  # the 'suspension of the quart' having to be resolved into a following major triad.
+
+  # With resolution
+  use_synth :fm
+  play chord(:c5, '7sus4'), sustain: 3, release: 1
+  sleep 3
+  play chord(:c5, :dom7), sustain: 3, release: 1
+  sleep 3
+  play invert_chord(chord(:f4), 2), sustain: 2, release: 2
+  
+end

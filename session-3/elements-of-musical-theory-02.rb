@@ -68,7 +68,7 @@ comment do
   
 end
 
-uncomment do
+comment do
 
   # A chord does 1. not necessarily have to have two thirds and 2. can
   # have more than three notes. These are the reasons, why you'll find
@@ -180,18 +180,16 @@ uncomment do
     sleep 3
     play chord(:C, :i7), sustain: 2, release: 1
     sleep 3
-
-  
 end
 
 with_bpm 120 do
 
-  use_synth :fm
-  use_synth_defaults amp: 1, divisor: 0.05, depth: 20, attack: 0, sustain: 0, release: 1
-  
-  degrees = (ring 1,2,3,4,5,6,7,8)
-  
   comment do
+
+    use_synth :fm
+    use_synth_defaults amp: 1, divisor: 0.05, depth: 20, attack: 0, sustain: 0, release: 1
+    
+    degrees = (ring 1,2,3,4,5,6,7,8)
 
     # On every note of our C-Major scale you can build a chord using
     # only the material of this scale. That's called 'diatonic'.
@@ -297,8 +295,9 @@ with_bpm 120 do
   end #comment
 
   # Now we use chords with four notes (fequently used e.g. in Jazz) for the same cadenza
-  num_of_notes = 4
-
+  
+    num_of_notes = 4
+    
   comment do
 
     play chord_degree(6, :c, :major, num_of_notes), release: 1.5
@@ -354,12 +353,3 @@ with_bpm 120 do
   end #comment
 
 end #with_bpm
-
-
-# TODO
-# Intervalle und Stufen
-#   Alle Intervalle vom Grundton aus
-#   Ein bischen mit Quinten spielen?
-#   Akkorde mit unterschiedlichen Ergänzungen
-#   7, #11, 9, sus4, 7/#9
-# Harmonisierung (Amerkica: Melodie, Akkorde drunter, andere Akkorde)
