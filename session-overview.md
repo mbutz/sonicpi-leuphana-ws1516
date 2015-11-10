@@ -14,11 +14,10 @@ Session 1 am: 14.10.15
 - Sonic Pi-Dokumentation "Tutorial" und "Beispiele"
 - Kyle Kingsbury: Core language concepts, https://aphyr.com/posts/266-core-language-concepts
 
-## 2. Syntheser, Musiktheorie, Datenstrukturen und Kontrollfluss
+## 2. Syntheser, Datenstrukturen und Kontrollfluss
 
 Session 2 am: 28.10.15
 
-- Tonmaterial, Skalen, Akkorde (kurze Einführung in die Musiktheorie mit Hinblick auf Sonic Pi);
 - Datenstrukturen und Kontrollfluss I
 - Synthesizer (Grundlagen, Bestand in Sonic Pi)
 - Pair Programming
@@ -44,13 +43,13 @@ Dazu die Präsentation von Sina Brendel und Moritz Constantin: https://prezi.com
 - Overtones, harmonics and Additive synthesis, https://www.youtube.com/watch?v=YsZKvLnf7wU&list=PL0CF041F562C5BE5E
 - Sonic Pi-Dokumentation "Synths"
 
-## Filter und Effekte, Datenstrukturen und Kontrollfluss II, Timing
+## Filter und Effekte, Musiktheorie, Datenstrukturen und Kontrollfluss II
 
 Session 3 am: 11.11.15
 
+- Tonmaterial, Skalen, Akkorde (kurze Einführung in die Musiktheorie mit Hinblick auf Sonic Pi)
 - Filter und Effekte in Sonic Pi
 - Datenstrukturen und Kontrollfluss II: Codebeispiele mit Erläuterungen
-- Timing in Live-Loops: Zeitliche Organisation unterschiedlicher Klangquellen in Live-Loops
 - Pair Programming
 
 ### Referate
@@ -62,8 +61,9 @@ Session 3 am: 11.11.15
 ### Ressourcen
 
 - Sonic Pi-Dokumentation "Filter" und "Fx"
+- Einführung in die Musiktheorie, kurze Einführung als PDF: http://www.2felsfrei.de/attachments/024_musiktheorie.pdf
 
-## Sampling / Drum-Loops und Sequencing
+## Sampling, Drum-Loops und Sequencing, Timing
 
 Session 4 am: 25.11.15
 
