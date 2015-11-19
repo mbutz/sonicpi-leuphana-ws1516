@@ -50,14 +50,14 @@ comment do
 
 end #comment
 
-comment do
+uncomment do
   
   # A scale usually consists of half and whole (or two half) tone steps.
   # For the major scale applies the following structure:
   # c - 1 - d - 1 - e  - 1/2 f - 1 - g - 1 - a - 1 -  b - 1/2 -  c
 
   play_pattern_timed scale(:c, :major), 1
-  sleep 2
+  # sleep 2
 
   # The differentiating character of scales thus depends on
   # 1. How many tones the scale has (usually 7)
@@ -66,8 +66,8 @@ comment do
   # A minor scale could e.g. look like this:
   # c - 1 - d - 1/2 - eb - 1 - f - 1 - g - 1/2 - ab - 1 - bb - 1 - c
 
-  play_pattern_timed scale(:c, :aeolian), 1
-  sleep 2
+  #play_pattern_timed scale(:c, :aeolian), 1
+  #sleep 2
 
 end #comment
 
@@ -112,7 +112,7 @@ with_bpm 160 do
 
   comment do
 
-    play_pattern_timed scale(:c, :major_pentatonic), 0.75
+    #play_pattern_timed scale(:c, :major_pentatonic), 0.75
     sleep 2
 
     play_pattern_timed scale(:c, :minor_pentatonic), 0.75
@@ -127,7 +127,7 @@ comment do
   # With these you can't do much 'wrong'; e.g.:
 
   48.times do
-    play scale(:c, :minor_pentatonic, num_octaves: 2).choose
+    play scale(:c, :minor_pentatonic, num_octaves: 2).choose, release: 2
     sleep 0.25
   end
 
