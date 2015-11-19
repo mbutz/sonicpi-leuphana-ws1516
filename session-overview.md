@@ -78,6 +78,10 @@ Session 4 am: 25.11.15
     - Samples in Sonic Pi (Bestand, Parameter, Beispiele)
     - Verwendung eigener Samples
 
+### Ressourcen
+
+- Beispiel für einen kompletten Song in Sonic Pi: https://www.youtube.com/watch?v=y_jbgP5AelI, Code dazu: https://github.com/mbutz/sonicpi-leuphana-ws1516/tree/master/session-4/afx
+
 ## Randomization und Live-Loops, Elektronische Musik I
 
 Session 5 am: 09.12.15
