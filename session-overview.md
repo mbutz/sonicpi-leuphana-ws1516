@@ -81,6 +81,7 @@ Session 4 am: 25.11.15
 ### Ressourcen
 
 - "Can I Get Another Amen", Dokumentarfilm über den Amen Break von Nate Harrison, https://archive.org/details/NateHarrisonCanIGetAnAmen
+- Beispiel für einen kompletten Song in Sonic Pi: https://www.youtube.com/watch?v=y_jbgP5AelI, Code dazu: https://github.com/mbutz/sonicpi-leuphana-ws1516/tree/master/session-4/afx
 
 ## Randomization und Live-Loops, Elektronische Musik I
 

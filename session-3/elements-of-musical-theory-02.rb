@@ -9,9 +9,9 @@ use_bpm 120
 
 comment do
   # Intervalls are the corner stones of chords; especially the
-  # third; to call a bunch of tones a third there must be at
+  # third; to call a bunch of tones a chord there must be at
   # least one third (or its inversion: a sixth). Usually chords
-  # are build of a succession of thirds.
+  # are build of two ore more thirds.
 
   # A succession of fiths:
   
@@ -23,7 +23,7 @@ comment do
 
 end
 
-comment do
+uncomment do
 
   # Add a note between these two notes and you will get
   # two thirds - one build over the other.
