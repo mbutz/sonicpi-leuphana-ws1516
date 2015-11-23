@@ -78,6 +78,10 @@ Session 4 am: 25.11.15
     - Samples in Sonic Pi (Bestand, Parameter, Beispiele)
     - Verwendung eigener Samples
 
+### Ressourcen
+
+- "Can I Get Another Amen", Dokumentarfilm über den Amen Break von Nate Harrison, https://archive.org/details/NateHarrisonCanIGetAnAmen
+
 ## Randomization und Live-Loops, Elektronische Musik I
 
 Session 5 am: 09.12.15
