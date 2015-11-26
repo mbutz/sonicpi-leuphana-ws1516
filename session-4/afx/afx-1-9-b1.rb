@@ -65,6 +65,18 @@ define :play_synth do |notes|
   end
 end
 
+uncomment do
+  # TEST the sliding melody code
+  pattern = [[:to,3,2,2,:g4,:c5]]
+  use_synth :fm
+  use_synth_defaults amp: 1, attack: 0.3, sustain: 0.2, release: 0.2, pan: 0, divisor: 20, depth: 0.0
+  in_thread do
+    with_fx :reverb, room: 0.9 do
+      play_synth pattern
+    end
+  end
+end
+
 # rhythmic patterns (ptn)
 #                   1 e + e 2 e + e 3 e + e 4 e + e
 

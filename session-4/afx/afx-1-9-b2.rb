@@ -3,9 +3,11 @@
 
 use_debug false
 
-path = "/home/marty/projects/leuphana-local/sonic-pi/mb/afx/"
+path = "/home/marty/projects/leuphana-ws1516/session-4/afx/"
 load_samples [:loop_compus, :elec_wood, :drum_bass_hard, :drum_snare_hard, :drum_snare_hard, :drum_cymbal_closed, :elec_snare, :drum_tom_hi_soft, "#{path}tambourine.wav"]
 use_sample_pack_as path, :afx
+
+
 
 define :mod_shaker do
 
