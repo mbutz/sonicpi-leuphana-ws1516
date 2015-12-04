@@ -43,12 +43,12 @@ Dazu die Präsentation von Sina Brendel und Moritz Constantin: https://prezi.com
 - Overtones, harmonics and Additive synthesis, https://www.youtube.com/watch?v=YsZKvLnf7wU&list=PL0CF041F562C5BE5E
 - Sonic Pi-Dokumentation "Synths"
 
-## Filter und Effekte, Musiktheorie, Datenstrukturen und Kontrollfluss II
+## Sampling, Filter, Effekte, Musiktheorie, Datenstrukturen und Kontrollfluss II
 
 Session 3 am: 11.11.15
 
 - Tonmaterial, Skalen, Akkorde (kurze Einführung in die Musiktheorie mit Hinblick auf Sonic Pi)
-- Filter und Effekte in Sonic Pi
+- Sampling, Filter und Effekte in Sonic Pi
 - Datenstrukturen und Kontrollfluss II: Codebeispiele mit Erläuterungen
 - Pair Programming
 
@@ -63,12 +63,12 @@ Session 3 am: 11.11.15
 - Sonic Pi-Hilfe "Fx" und "Tutorial", Kapitel "Effekte"
 - Einführung in die Musiktheorie, kurze Einführung als PDF: http://www.2felsfrei.de/attachments/024_musiktheorie.pdf
 
-## Sampling, Drum-Loops und Sequencing, Timing
+## Organisation kompletter Scores, Sampling
 
 Session 4 am: 25.11.15
 
-- Grundlage zum Sampling, Bestand in Sonic Pi und eigene Erweiterungen
-- Sequencing in Sonic Pi: Codebeispiele mit Erläuterungen
+- Ergänzungen zum Sampling, Bestand in Sonic Pi und eigene Erweiterungen
+- Einstieg zur Organisation kompletter Stücke (scores) in Sonic Pi: Codebeispiele mit Erläuterungen
 - Pair Programming
 
 ### Referat
@@ -83,12 +83,12 @@ Session 4 am: 25.11.15
 - "Can I Get Another Amen", Dokumentarfilm über den Amen Break von Nate Harrison, https://archive.org/details/NateHarrisonCanIGetAnAmen
 - Beispiel für einen kompletten Song in Sonic Pi: https://www.youtube.com/watch?v=y_jbgP5AelI, Code dazu: https://github.com/mbutz/sonicpi-leuphana-ws1516/tree/master/session-4/afx
 
-## Randomization und Live-Loops, Elektronische Musik I
+## Sequencing von Drum Samples, Elektronische Musik I
 
 Session 5 am: 09.12.15
 
 - Elektronische Musik am Beispiel von "Kontakte" von Karlheinz Stockhausen
-- Randomization und Live-Loops: Codebeispiele und Erläuterungen
+- Sequencing von Samples: Codebeispiele und Erläuterungen
 - Pair Programming
 
 ### Referat
@@ -100,11 +100,11 @@ Session 5 am: 09.12.15
 - WDR3 Studio Elektronische Musik Stockhausen - Kontakte, Radio-Feature online:  https://www.youtube.com/watch?v=kBP1v29cx60
 - Karlheinz Stockhausen (1978): Die vier Kriterien der elektronischen Musik, in: Texte zur Musik, Bd. 4, Köln: DuMont, S. 360-401; als Skript eines Vortrag vom 14.09.72 online: http://www.elektropolis.de/ssb_story_stockhausen.htm
 
-## Live-Programmierung, Elektronische Musik II: Electronica
+## Live-Loops und Timing, Elektronische Musik II: Electronica
 
 Session 6 am: 06.01.16
 
-- Live-Programmierung, Codebeispiele und Erläuterungen
+- Live-Loops erstellen und miteinander synchronisieren: Codebeispiele und Erläuterungen
 - Elektronische Musik II, 'Advice to clever children': Aphex Twin, Plasticman, Scanner, Daniel Pemberton u.a.
 - Pair Programming
 
