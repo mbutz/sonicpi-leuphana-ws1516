@@ -27,3 +27,5 @@ Desweiteren bietet das Seminar Gelegenheit, sich mit den folgenden Fragen und Th
 * Computergenerierte Musik (Beispiele, Historie)
 * Grundlegende musiktheoretische Konzepte (z.B. Melodik, Harmonik, Rhythmik)
 * Grundlegende Konzepte der Akustik und digitaler Klangerzeugung (Synthesizer, Sampling)
+
+[Zur Sessionübersicht](https://github.com/mbutz/sonicpi-leuphana-ws1516/blob/master/session-overview.md)
