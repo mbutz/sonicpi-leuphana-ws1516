@@ -14,7 +14,7 @@ Session 1 am: 14.10.15
 - Sonic Pi-Dokumentation "Tutorial" und "Beispiele"
 - Kyle Kingsbury: Core language concepts, https://aphyr.com/posts/266-core-language-concepts
 
-## 2. Syntheser, Datenstrukturen und Kontrollfluss
+## 2. Synthesizer, Datenstrukturen und Kontrollfluss
 
 Session 2 am: 28.10.15
 
@@ -60,7 +60,7 @@ Session 3 am: 11.11.15
 
 ### Ressourcen
 
-- Sonic Pi-Hilfe "Fx" und "Tutorial", Kapitel "Effekte"
+- Sonic Pi-Hilfe "Sampes", "Fx" und "Tutorial", Kapitel über Sampling und Effekte
 - Einführung in die Musiktheorie, kurze Einführung als PDF: http://www.2felsfrei.de/attachments/024_musiktheorie.pdf
 
 ## Organisation kompletter Scores, Sampling
@@ -120,3 +120,18 @@ Session 7 am: 20.01.16
 - Vorstellung der Arbeitsergebnisse
 - Rekapitulation
 - Offene Fragen
+
+
+## Allgemeine Ressourcen
+
+**Philharmonic Orchestra**
+
+Thousands of free, downloadable sound samples specially recorded by Philharmonia Orchestra players. These samples are suitable for creating any kind of music, no matter what style.
+
+http://www.philharmonia.co.uk/explore/make_music
+
+**Freesound.org**
+
+Freesound aims to create a huge collaborative database of audio snippets, samples, recordings, bleeps, ... released under Creative Commons licenses that allow their reuse.
+
+http://www.freesound.org
