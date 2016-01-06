@@ -112,6 +112,9 @@ Session 6 am: 06.01.16
 
 - Interview mit Karlheinz Stockhausen, 'Advice to clever children', "The Wire", November 1995, http://www.andreas.de/aphextwin/articles/interview2.html
 - Karlheinz Stockhausen, Gesang der Jünglinge, https://www.youtube.com/watch?v=nffOJXcJCDg
+- Live Coding-Beispiel von Jindřich Mynarz, "Live coding dub techno in Sonic Pi", https://www.youtube.com/watch?v=a1RxpJkvqpY
+
+Jindřich Mynarz 
 
 ## Offene Enden: Rückblick, Vorstellung der Arbeitsproben, Ausblick
 
