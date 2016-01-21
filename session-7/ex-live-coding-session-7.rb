@@ -4,6 +4,14 @@
 use_bpm 90
 use_debug true
 
+##########################################################################
+#
+# NOTE:
+# You will have to download the sample "/session-7/madcrew.wav
+# and adjust the following sample path to the one on your harddrive
+# before you can successfully run this code!
+#
+##########################################################################
 sample_path = "/home/marty/projects_marty/leuphana-local/sonic-pi/mb/samples/"
 
 load_samples ["#{sample_path}madcrew.wav"]

@@ -25,6 +25,18 @@ bass_dur_2 = [0.5, 2, 0.5, 0.5, 0.5,
               0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5,
               0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5]
 
+# Mixer
+
+bass1     = 0
+bass2     = 0
+amen      = 0
+breakbeat = 0
+bush      = 0
+bush_rel  = 1
+bush_att  = 1
+bush_wait = 1
+bush_rep  = 1
+  
 # This function plays note lengths and rests according to the given value
 define :play_synth do |notes,durations|
   notes.zip(durations).each do |n,d|
@@ -48,7 +60,7 @@ end
 # Loops for timing
 
 live_loop :bar1 do
-  sample :elec_pop, amp: 1, rate: 1
+  # sample :elec_pop, amp: 1, rate: 1
   sleep 4
 end
 
@@ -70,10 +82,9 @@ end
 use_synth :fm
 use_synth_defaults divisor: 1, depth: 2, attack: 0, sustain: 0, release: 1, amp: 2
 
-b1 = 0
 
 live_loop :bass1 do
-  stop if b1 == 0
+  stop if bass1 == 0
   ratio = 1.3
   sync :bar4
   with_fx :bpf, centre: 30, res: 0.25 do
@@ -82,7 +93,7 @@ live_loop :bass1 do
 end
 
 live_loop :bass2 do
-  #stop
+  stop
   ratio = 1.8
   sync :bar4
   with_fx :bpf, centre: 30, res: 0.25 do
@@ -93,7 +104,7 @@ end
 # Drums
 
 live_loop :amen do
-  # stop
+  stop if amen == 0
   sync :bar2
   tempo = dice(3)
   with_fx :reverb, room: 1, mix: 0.25 do
@@ -110,7 +121,7 @@ live_loop :amen do
 end
 
 live_loop :breakbeat do
-  #stop
+  stop if breakbeat == 0
   sync :bar4
   2.times do
     sample :loop_breakbeat, beat_stretch: 8, amp: 2
@@ -121,30 +132,10 @@ end
 # Keyboard
 
 live_loop :bush do
-  #stop
+  stop if bush == 0
   sync :bar2
   use_synth :beep
   use_synth_defaults amp: 0.5
-
-  # "repeat"
-  # how many times is the chord sequence repeated;
-  # higher values make especially sense if the chords have short attack and release
-  repeat = 4
-
-  # "pause"
-  # pause after any chord; try 0.5, 1, 1.75, 2, 4 or any other value;
-  # 4 syncs with the bass => one chord per bar;
-  # or take a random value: choose([0.5,1,2,4])
-  pause = 1.75
-
-  # attack time
-  a = 0.1
-
-  # release time
-  # long release (and attack) times together wich high decay values in the echo
-  # create continious and overlapping sounds
-  # short attack and release times and sort values for "pause" produce a percussive pattern
-  r = 1
   
   repeat.times do
     with_fx :reverb, room: 1 do
