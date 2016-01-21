@@ -116,8 +116,6 @@ Session 6 am: 06.01.16
 - Karlheinz Stockhausen, Gesang der Jünglinge, https://www.youtube.com/watch?v=nffOJXcJCDg
 - Live Coding-Beispiel von Jindřich Mynarz, "Live coding dub techno in Sonic Pi", https://www.youtube.com/watch?v=a1RxpJkvqpY
 
-Jindřich Mynarz 
-
 ## Offene Enden: Rückblick, Vorstellung der Arbeitsproben, Ausblick
 
 Session 7 am: 20.01.16
