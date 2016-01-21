@@ -42,6 +42,7 @@ Dazu die Präsentation von Sina Brendel und Moritz Constantin: https://prezi.com
 - Sound on Sound, Synth Secrets, http://www.soundonsound.com/sos/allsynthsecrets.htm
 - Overtones, harmonics and Additive synthesis, https://www.youtube.com/watch?v=YsZKvLnf7wU&list=PL0CF041F562C5BE5E
 - Sonic Pi-Dokumentation "Synths"
+- A Young Person's Guide to the Principles of Music Synthesis by Beau Sievers http://beausievers.com/synth/synthbasics/
 
 ## Sampling, Filter, Effekte, Musiktheorie, Datenstrukturen und Kontrollfluss II
 
@@ -62,6 +63,7 @@ Session 3 am: 11.11.15
 
 - Sonic Pi-Hilfe "Sampes", "Fx" und "Tutorial", Kapitel über Sampling und Effekte
 - Einführung in die Musiktheorie, kurze Einführung als PDF: http://www.2felsfrei.de/attachments/024_musiktheorie.pdf
+- A Young Person's Guide to the Principles of Music Synthesis by Beau Sievers http://beausievers.com/synth/synthbasics/
 
 ## Organisation kompletter Scores, Sampling
 
@@ -118,6 +120,7 @@ Session 6 am: 06.01.16
 Session 7 am: 20.01.16
 
 - Vorstellung der Arbeitsergebnisse
+- Live Coding-Beispiel (tick, look, ring)
 - Rekapitulation
 - Offene Fragen
 
