@@ -5,6 +5,7 @@
 ##
 
 use_bpm 95
+set_sched_ahead_time! 1
 
 in_thread(name: :drum_machine) do
 

@@ -2,6 +2,7 @@
 
 use_debug false
 use_bpm 100
+set_sched_ahead_time! 1
 
 load_samples [:drum_bass_hard, :drum_bass_soft, :drum_snare_hard, :drum_snare_soft, :drum_cymbal_closed]
 
@@ -34,7 +35,7 @@ hihat_pattern_op = [ 0,0,0,0, 0,0,0,1 ]
 # one bar; so if you call this function with "4.times do" you
 # will get a pattern of 4 bars
 
-#define :drums do
+define :drums do
 
 # Play the Bass
 in_thread do
@@ -64,6 +65,7 @@ in_thread do
 end
 
 # Play the Snare
+
 in_thread do
   4.times do
     sample :drum_snare_hard if snare_pattern_on.tick > 0
@@ -78,7 +80,8 @@ in_thread do
   end
 end
 
-# Play the Hihat
+# Play the Hihatbass_pattern_of  = [ 0,1,0,0, 0,0,0,0, 1,0,0,0, 0,0,0,0 ]
+
 in_thread do
   16.times do
     sample :drum_cymbal_closed, amp: 0.75 if hihat_pattern_on.tick > 0
@@ -107,7 +110,7 @@ end
 # one bar; so if you call this function with "4.times do" you
 # will get a pattern of 4 bars
 
-#end #:drums
+end #:drums
 
 # You can pack parts of or all drum elements into functions
 # Then it'll be easier to use it a a module within a song

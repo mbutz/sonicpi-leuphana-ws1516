@@ -2,6 +2,7 @@
 
 use_debug true
 use_bpm 100
+set_sched_ahead_time! 1
 
 load_samples [:drum_bass_hard, :drum_bass_soft, :drum_snare_hard, :drum_snare_soft, :drum_cymbal_closed]
 
