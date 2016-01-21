@@ -119,7 +119,7 @@ live_loop :fat_bass do
 
   use_synth :fm
   use_synth_defaults divisor: 1, depth: 2, attack: 0, sustain: 0, release: 0.5, cutoff: 120, 
-  amp: fat_bass_vol * master_16.tick * fat_bass_bpf_vol.look
+  amp: fat_bass_vol * master_16.tick
   with_fx :bpf, centre: fat_bass_bpf_val.look do
     play_pattern_timed fat_bass_line, fat_bass_durations
   end
