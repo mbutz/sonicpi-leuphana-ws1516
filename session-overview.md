@@ -141,6 +141,7 @@ Freesound aims to create a huge collaborative database of audio snippets, sample
 http://www.freesound.org
 
 **Dennis DeSantis: Making Music**
+
 This book is a collection of solutions to common roadblocks in the creative process, with a specific emphasis on solving musical problems, making progress, and (most importantly) finishing what you start. This site features a selection of chapters from the book.
 
 https://makingmusic.ableton.com
