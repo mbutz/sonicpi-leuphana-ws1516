@@ -146,7 +146,7 @@ This book is a collection of solutions to common roadblocks in the creative proc
 
 https://makingmusic.ableton.com
 
-** Mark Fell: Collateral Damage
+**Mark Fell: Collateral Damage**
 
 Zum Verhältnis von musikalischer Kreativität und Technologie: "We can redefine technology, not as a tool subservient to creativity or an obstacle to it, but as part of a wider context within which creative activity happens."
 
