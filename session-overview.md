@@ -145,3 +145,9 @@ http://www.freesound.org
 This book is a collection of solutions to common roadblocks in the creative process, with a specific emphasis on solving musical problems, making progress, and (most importantly) finishing what you start. This site features a selection of chapters from the book.
 
 https://makingmusic.ableton.com
+
+** Mark Fell: Collateral Damage
+
+Zum Verhältnis von musikalischer Kreativität und Technologie: "We can redefine technology, not as a tool subservient to creativity or an obstacle to it, but as part of a wider context within which creative activity happens."
+
+http://www.thewire.co.uk/in-writing/essays/collateral-damage-mark-fell
